@@ -1,1 +1,3 @@
-# data-science-portfolio
+# Data Science Portfolio
+
+## Exploratory Data Analysis
