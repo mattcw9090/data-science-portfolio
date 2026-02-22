@@ -1,6 +1,8 @@
 # Data Science Portfolio
 
 ## Machine Learning
+* **[House Prices Prediction (Kaggle)](https://github.com/mattcw9090/data-science-portfolio/blob/main/house_prices.ipynb)** — Regression on the Ames Housing dataset with a log-transformed target. Evaluated linear, regularized, and tree-based models using 5-fold CV; ElasticNet and XGBoost performed best and were used for Kaggle submissions.
+
 * **[Titanic Survival Prediction (Kaggle)](https://github.com/mattcw9090/data-science-portfolio/blob/main/titanic.ipynb)** — End-to-end binary classification project using EDA-driven feature engineering (titles, family and ticket groups, fare normalization, cabin indicators). Models were evaluated with stratified k-fold cross-validation using F1-score to address class imbalance. Logistic Regression and XGBoost were tuned via GridSearchCV and RandomizedSearchCV, with XGBoost performing best.
 
 * **[Iris Species Classification](https://github.com/mattcw9090/data-science-portfolio/blob/main/iris_flower_classification.ipynb)** — Multiclass classification on the Iris dataset. Baseline models (Logistic Regression, KNN, SVM, Random Forest) were evaluated with 5-fold cross-validation, and a tuned SVM achieved 96.7% test accuracy with balanced class performance.
