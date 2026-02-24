@@ -1,5 +1,8 @@
 # Data Science Portfolio
 
+## Deep Learning
+* **[Cats vs Dogs Image Classification](https://github.com/mattcw9090/data-science-portfolio/blob/main/cats_vs_dogs_classification.ipynb)** — Binary image classification using a custom CNN built with TensorFlow/Keras. Implemented an end-to-end pipeline including data cleaning, train/validation splitting, `tf.data` input pipelines, regularization (dropout), and global average pooling. Evaluated using accuracy on a held-out validation set.
+
 ## Machine Learning
 * **[House Prices Prediction (Kaggle)](https://github.com/mattcw9090/data-science-portfolio/blob/main/house_prices.ipynb)** — Regression on the Ames Housing dataset with a log-transformed target. Evaluated linear, regularized, and tree-based models using 5-fold CV; ElasticNet and XGBoost performed best and were used for Kaggle submissions.
 
