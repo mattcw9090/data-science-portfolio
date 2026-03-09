@@ -1,6 +1,8 @@
 # Data Science Portfolio
 
 ## Deep Learning
+* **[Neural Network from Scratch (NumPy + Backpropagation)](https://github.com/mattcw9090/data-science-portfolio/blob/main/neural_network_from_scratch.ipynb)** — Built a fully connected neural network from first principles using NumPy, including parameter initialization, forward propagation, ReLU activations, MSE loss, backpropagation, and mini-batch gradient descent. Derived the core mathematics for each step, implemented training with configurable epochs and batch sizes, and demonstrated end-to-end learning on synthetic data. Designed as a walkthrough-style project to showcase both theoretical understanding and low-level implementation of deep learning fundamentals.
+
 * **[Cats vs Dogs Image Classification](https://github.com/mattcw9090/data-science-portfolio/blob/main/cats_vs_dogs_classification.ipynb)** — Binary image classification using a custom CNN built with TensorFlow/Keras. Implemented an end-to-end pipeline including data cleaning, train/validation splitting, `tf.data` input pipelines, regularization (dropout), and global average pooling. Evaluated using accuracy on a held-out validation set.
 
 ## Machine Learning
