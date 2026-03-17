@@ -8,6 +8,8 @@
 * **[Cats vs Dogs Image Classification](https://github.com/mattcw9090/data-science-portfolio/blob/main/cats_vs_dogs_classification.ipynb)** — Binary image classification using a custom CNN built with TensorFlow/Keras. Implemented an end-to-end pipeline including data cleaning, train/validation splitting, `tf.data` input pipelines, regularization (dropout), and global average pooling. Evaluated using accuracy on a held-out validation set.
 
 ## Machine Learning
+* **[Movie Recommendation System with Collaborative Filtering](https://github.com/mattcw9090/data-science-portfolio/blob/main/recommendation_system.ipynb)** — Built a movie recommender using the MovieLens 100K dataset and item-based collaborative filtering. Transformed user–movie ratings into a sparse matrix representation, explored movie similarity using Pearson correlation and cosine similarity, and implemented a KNN-based retrieval approach to generate movie-to-movie recommendations from historical user behavior. Showcases recommender system design, similarity metrics, sparse data handling, and practical recommendation workflows in Python.
+
 * **[S&P 500 Next-Day Direction Predictor](https://github.com/mattcw9090/data-science-portfolio/blob/main/stock_market_price_predictor.ipynb)** — Time-series classification project predicting whether the S&P 500 (^GSPC) will close up or down the next trading day. Built a leakage-safe pipeline with walk-forward (rolling window) backtesting, engineered multi-horizon features (price-to-moving-average ratios and trend counts with lagging to avoid look-ahead), and evaluated a Random Forest baseline vs an enhanced feature set. Included probability thresholding to trade off precision vs coverage.
 
 
