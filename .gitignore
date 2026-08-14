@@ -1,0 +1,34 @@
+# OS and editors
+.DS_Store
+.vscode/
+.idea/
+
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+*.log
+
+# Generated notebook artifacts
+/artifacts/
+/training_checkpoints/
+/*.joblib
+/*.h5
+/*.keras
+/submission_*.csv
+/xgb_submission.csv
+/sp500.csv
+
+# Downloaded, extracted, or private data
+/datasets/.cache/
+/datasets/movie-lens-dataset-100k/
+/datasets/facial-recognition/
+/datasets/sp500_close_10y.csv

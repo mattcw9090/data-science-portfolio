@@ -1,29 +1,101 @@
-# Data Science Portfolio
+# Matthew Chew — Data Science Portfolio
 
-## Deep Learning
-* **[Real-Time Facial Verification with a Siamese Neural Network](https://github.com/mattcw9090/data-science-portfolio/blob/main/real_time_facial_recognition.ipynb)** — Built an end-to-end facial verification system using OpenCV, TensorFlow, and a Siamese neural network. Prepared negative samples from the LFW dataset alongside custom anchor/positive webcam captures, constructed a `tf.data` pipeline for paired image inputs, trained a shared embedding model with a custom distance-based comparison layer, and deployed the model in a real-time webcam verification loop. Showcases computer vision, deep learning, data pipeline design, and practical model deployment.
+[![Portfolio checks](https://github.com/mattcw9090/data-science-portfolio/actions/workflows/portfolio-quality.yml/badge.svg)](https://github.com/mattcw9090/data-science-portfolio/actions/workflows/portfolio-quality.yml)
 
-* **[Neural Network from Scratch (NumPy + Backpropagation)](https://github.com/mattcw9090/data-science-portfolio/blob/main/neural_network_from_scratch.ipynb)** — Built a fully connected neural network from first principles using NumPy, including parameter initialization, forward propagation, ReLU activations, MSE loss, backpropagation, and mini-batch gradient descent. Derived the core mathematics for each step, implemented training with configurable epochs and batch sizes, and demonstrated end-to-end learning on synthetic data. Designed as a walkthrough-style project to showcase both theoretical understanding and low-level implementation of deep learning fundamentals.
+End-to-end projects across predictive modeling, financial analysis, natural language processing, recommender systems, and computer vision. The work emphasizes reproducible workflows, appropriate evaluation, and clear communication of results and limitations.
 
-* **[Cats vs Dogs Image Classification](https://github.com/mattcw9090/data-science-portfolio/blob/main/cats_vs_dogs_classification.ipynb)** — Binary image classification using a custom CNN built with TensorFlow/Keras. Implemented an end-to-end pipeline including data cleaning, train/validation splitting, `tf.data` input pipelines, regularization (dropout), and global average pooling. Evaluated using accuracy on a held-out validation set.
+## Featured case studies
 
-## Machine Learning
-* **[Movie Recommendation System with Collaborative Filtering](https://github.com/mattcw9090/data-science-portfolio/blob/main/recommendation_system.ipynb)** — Built a movie recommender using the MovieLens 100K dataset and item-based collaborative filtering. Transformed user–movie ratings into a sparse matrix representation, explored movie similarity using Pearson correlation and cosine similarity, and implemented a KNN-based retrieval approach to generate movie-to-movie recommendations from historical user behavior. Showcases recommender system design, similarity metrics, sparse data handling, and practical recommendation workflows in Python.
+These notebooks are the best starting points because they include saved results and a clear analytical narrative.
 
-* **[S&P 500 Next-Day Direction Predictor](https://github.com/mattcw9090/data-science-portfolio/blob/main/stock_market_price_predictor.ipynb)** — Time-series classification project predicting whether the S&P 500 (^GSPC) will close up or down the next trading day. Built a leakage-safe pipeline with walk-forward (rolling window) backtesting, engineered multi-horizon features (price-to-moving-average ratios and trend counts with lagging to avoid look-ahead), and evaluated a Random Forest baseline vs an enhanced feature set. Included probability thresholding to trade off precision vs coverage.
+| Project | Problem and approach | Saved result |
+|---|---|---|
+| **[Customer Churn Classification](customer_churn_predictor.ipynb)** | Leakage-aware preprocessing and resampling inside stratified cross-validation, followed by model comparison and holdout evaluation. | Logistic regression reached **0.846 mean CV ROC-AUC** and **78.6% churn recall** on the holdout set. |
+| **[S&P 500 Return Analysis](stock_return.ipynb)** | Batched data acquisition, coverage checks, normalized performance, annualized risk/return, and correlation analysis. | Analyzed **456 equities across 2,513 trading sessions**; the average pairwise daily-return correlation was **0.327**. |
+| **[Neural Network from Scratch](neural_network_from_scratch.ipynb)** | A fully connected regression network implemented in NumPy, including forward propagation, backpropagation, and mini-batch gradient descent. | Achieved **0.0229 validation MSE** on a nonlinear synthetic regression task. |
+| **[House Price Regression](house_prices.ipynb)** | Mixed-type feature engineering and comparison of linear, regularized, ensemble, and boosting models. | XGBoost reached a notebook-reported **0.1244 five-fold CV RMSE** on the log-transformed target. |
+| **[Student Placement Analysis](student_placement_eda.ipynb)** | Data-quality validation, distribution analysis, group comparisons, and correlation analysis across student outcomes. | Profiled **100,000 records**, including a **54.5% placement rate** and a **13.32 LPA** mean salary among placed students. |
 
+## Project index
 
-* **[Customer Churn Prediction](https://github.com/mattcw9090/data-science-portfolio/blob/main/customer_churn_predictor.ipynb)** — End-to-end churn classification pipeline using the Telco Customer Churn dataset. Cleaned and validated data types (including robust numeric conversion for `TotalCharges`), performed EDA, and built models with leakage-safe preprocessing and resampling using an imbalanced-learn pipeline (`SMOTE` inside CV). Compared multiple classifiers with stratified cross-validation and evaluated on a held-out test set using ROC-AUC, F1-score, precision/recall, and confusion matrices. Included model interpretation via feature importance/coefficients (where applicable) and saved the final trained pipeline for reuse.
+### Applied machine learning
 
-* **[Twitter Sentiment Analysis (Sentiment140)](https://github.com/mattcw9090/data-science-portfolio/blob/main/sentiment_analysis.ipynb)** — Large-scale binary sentiment classification on 1.6M tweets using the Sentiment140 dataset. Built a reproducible end-to-end NLP pipeline with lightweight tweet preprocessing, TF–IDF feature extraction (unigrams + bigrams), and Logistic Regression. Evaluated performance using precision, recall, F1-score, and confusion matrices; conducted error analysis and interpreted model behavior via top weighted n-grams. Optimized for laptop-scale training with stratified sampling and saved the final sklearn pipeline for reuse.
+- **[Customer Churn Classification](customer_churn_predictor.ipynb)** — Imbalanced classification with `ColumnTransformer`, in-fold random oversampling, multi-metric cross-validation, and holdout evaluation.
+- **[House Price Regression](house_prices.ipynb)** — Feature engineering, ElasticNet, XGBoost, cross-validation, and prediction ensembling on mixed tabular data.
+- **[Titanic Survival Classification](titanic.ipynb)** — EDA-driven passenger and group features, stratified evaluation, and tuned logistic regression/XGBoost models.
+- **[Iris Species Classification](iris_flower_classification.ipynb)** — Multiclass baseline comparison, hyperparameter tuning, and final SVM evaluation.
 
-* **[House Prices Prediction (Kaggle)](https://github.com/mattcw9090/data-science-portfolio/blob/main/house_prices.ipynb)** — Regression on the Ames Housing dataset with a log-transformed target. Evaluated linear, regularized, and tree-based models using 5-fold CV; ElasticNet and XGBoost performed best and were used for Kaggle submissions.
+### Financial and time-series analysis
 
-* **[Titanic Survival Prediction (Kaggle)](https://github.com/mattcw9090/data-science-portfolio/blob/main/titanic.ipynb)** — End-to-end binary classification project using EDA-driven feature engineering (titles, family and ticket groups, fare normalization, cabin indicators). Models were evaluated with stratified k-fold cross-validation using F1-score to address class imbalance. Logistic Regression and XGBoost were tuned via GridSearchCV and RandomizedSearchCV, with XGBoost performing best.
+- **[S&P 500 Return Analysis](stock_return.ipynb)** — Ten-year cross-sectional analysis of normalized prices, annualized return and volatility, and daily-return correlations.
+- **[S&P 500 Next-Day Direction](stock_market_price_predictor.ipynb)** — Random-forest classification with lagged multi-horizon features and expanding-window backtesting.
 
-* **[Iris Species Classification](https://github.com/mattcw9090/data-science-portfolio/blob/main/iris_flower_classification.ipynb)** — Multiclass classification on the Iris dataset. Baseline models (Logistic Regression, KNN, SVM, Random Forest) were evaluated with 5-fold cross-validation, and a tuned SVM achieved 96.7% test accuracy with balanced class performance.
+### Natural language processing and recommendation
 
-* **[Linear Regression from Scratch (Gradient Descent)](https://github.com/mattcw9090/data-science-portfolio/blob/main/linear_regression_model_from_scratch.ipynb)** — Implemented linear regression from first principles using batch gradient descent and MSE loss, deriving gradients analytically and following a scikit-learn–style API.
+- **[Twitter Sentiment Analysis](sentiment_analysis.ipynb)** — TF–IDF unigram/bigram features, logistic regression, error analysis, and coefficient-based interpretation.
+- **[Movie Recommendation Systems](recommendation_system.ipynb)** — Weighted popularity ranking, item-to-item correlation, and sparse cosine-neighbor retrieval.
 
-## Exploratory Data Analysis
-* **[Student Placement Prediction Dataset 2026](https://github.com/mattcw9090/data-science-portfolio/blob/main/student_placement_eda.ipynb)** — Exploratory analysis of student placement outcomes, identifying academic and skill-based factors associated with placement rates and salary levels.
+### Deep learning and computer vision
+
+- **[Neural Network from Scratch](neural_network_from_scratch.ipynb)** — A framework-free walkthrough of dense-network mathematics and implementation.
+- **[Cats vs Dogs Classification](cats_vs_dogs_classification.ipynb)** — A TensorFlow `tf.data` image pipeline and custom convolutional neural network.
+- **[Real-Time Face Verification](real_time_facial_recognition.ipynb)** — An experimental local prototype using OpenCV and a Siamese neural network; it requires a webcam and private reference images.
+
+### Exploratory analysis and foundations
+
+- **[Student Placement Analysis](student_placement_eda.ipynb)** — An executive-style EDA focused on data quality, placement outcomes, and salary associations.
+- **[Linear Regression from Scratch](linear_regression_model_from_scratch.ipynb)** — A scikit-learn-style linear regressor trained with batch gradient descent.
+
+## Skills demonstrated
+
+| Capability | Evidence in this repository |
+|---|---|
+| Data analysis and communication | Pandas, NumPy, Seaborn, Matplotlib, executive summaries, and limitation-aware conclusions |
+| Validation and model selection | Stratified cross-validation, holdout testing, hyperparameter search, and expanding-window backtesting |
+| Feature engineering | Customer, housing, passenger, text, image, and market-derived features |
+| Machine learning | Linear models, SVM, KNN, random forests, XGBoost, imbalanced classification, and regression |
+| Deep learning | CNNs, Siamese networks, TensorFlow input pipelines, and backpropagation implemented from first principles |
+| NLP and recommenders | TF–IDF text classification, weighted ranking, collaborative filtering, and sparse nearest neighbors |
+
+## Repository layout
+
+```text
+.
+├── *.ipynb               # One self-contained portfolio project per notebook
+├── datasets/             # Small source datasets plus provenance documentation
+├── portfolio_utils/      # Reusable preprocessing shared by notebooks
+├── scripts/              # Lightweight repository validation
+├── requirements.txt      # Shared Python 3.12 notebook environment
+└── README.md              # Portfolio index and reviewer guide
+```
+
+The notebooks remain at the repository root so existing links and relative dataset paths stay stable.
+
+## Reproduce the projects
+
+```bash
+git clone https://github.com/mattcw9090/data-science-portfolio.git
+cd data-science-portfolio
+
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+jupyter lab
+```
+
+Open a notebook and run its cells from top to bottom. Several projects download their data on first run through KaggleHub or `yfinance`; Kaggle-hosted datasets may require local Kaggle credentials. Hardware-dependent and long-running notebooks state their additional requirements near the top.
+
+To run the fast repository checks without executing model training:
+
+```bash
+python scripts/validate_portfolio.py
+```
+
+## Data sources and limitations
+
+- Dataset sources, local paths, access methods, and usage notes are documented in **[datasets/README.md](datasets/README.md)**.
+- Downloaded datasets, model files, submissions, checkpoints, market-data caches, and private face images are intentionally excluded from version control.
+- The S&P 500 analyses use the current constituent list across historical prices, so results are subject to survivorship and membership bias. They are analytical demonstrations, not investment advice.
+- The face-verification notebook is a local learning prototype, not a production biometric system. Reference images should remain private and must not be committed.
+- Third-party datasets retain their original licenses and terms; this repository does not grant additional rights to them.
