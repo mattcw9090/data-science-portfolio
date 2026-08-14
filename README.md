@@ -10,41 +10,41 @@ These notebooks are the best starting points because they include saved results 
 
 | Project | Problem and approach | Saved result |
 |---|---|---|
-| **[Customer Churn Classification](customer_churn_predictor.ipynb)** | Leakage-aware preprocessing and resampling inside stratified cross-validation, followed by model comparison and holdout evaluation. | Logistic regression reached **0.846 mean CV ROC-AUC** and **78.6% churn recall** on the holdout set. |
-| **[S&P 500 Return Analysis](stock_return.ipynb)** | Batched data acquisition, coverage checks, normalized performance, annualized risk/return, and correlation analysis. | Analyzed **456 equities across 2,513 trading sessions**; the average pairwise daily-return correlation was **0.327**. |
-| **[Neural Network from Scratch](neural_network_from_scratch.ipynb)** | A fully connected regression network implemented in NumPy, including forward propagation, backpropagation, and mini-batch gradient descent. | Achieved **0.0229 validation MSE** on a nonlinear synthetic regression task. |
-| **[House Price Regression](house_prices.ipynb)** | Mixed-type feature engineering and comparison of linear, regularized, ensemble, and boosting models. | XGBoost reached a notebook-reported **0.1244 five-fold CV RMSE** on the log-transformed target. |
-| **[Student Placement Analysis](student_placement_eda.ipynb)** | Data-quality validation, distribution analysis, group comparisons, and correlation analysis across student outcomes. | Profiled **100,000 records**, including a **54.5% placement rate** and a **13.32 LPA** mean salary among placed students. |
+| **[Customer Churn Classification](projects/customer-churn/customer_churn_predictor.ipynb)** | Leakage-aware preprocessing and resampling inside stratified cross-validation, followed by model comparison and holdout evaluation. | Logistic regression reached **0.846 mean CV ROC-AUC** and **78.6% churn recall** on the holdout set. |
+| **[S&P 500 Return Analysis](projects/sp500-return-analysis/sp500_return_analysis.ipynb)** | Batched data acquisition, coverage checks, normalized performance, annualized risk/return, and correlation analysis. | Analyzed **456 equities across 2,513 trading sessions**; the average pairwise daily-return correlation was **0.327**. |
+| **[Neural Network from Scratch](projects/neural-network-from-scratch/neural_network_from_scratch.ipynb)** | A fully connected regression network implemented in NumPy, including forward propagation, backpropagation, and mini-batch gradient descent. | Achieved **0.0229 validation MSE** on a nonlinear synthetic regression task. |
+| **[House Price Regression](projects/house-prices/house_prices.ipynb)** | Mixed-type feature engineering and comparison of linear, regularized, ensemble, and boosting models. | XGBoost reached a notebook-reported **0.1244 five-fold CV RMSE** on the log-transformed target. |
+| **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** | Data-quality validation, distribution analysis, group comparisons, and correlation analysis across student outcomes. | Profiled **100,000 records**, including a **54.5% placement rate** and a **13.32 LPA** mean salary among placed students. |
 
 ## Project index
 
 ### Applied machine learning
 
-- **[Customer Churn Classification](customer_churn_predictor.ipynb)** — Imbalanced classification with `ColumnTransformer`, in-fold random oversampling, multi-metric cross-validation, and holdout evaluation.
-- **[House Price Regression](house_prices.ipynb)** — Feature engineering, ElasticNet, XGBoost, cross-validation, and prediction ensembling on mixed tabular data.
-- **[Titanic Survival Classification](titanic.ipynb)** — EDA-driven passenger and group features, stratified evaluation, and tuned logistic regression/XGBoost models.
-- **[Iris Species Classification](iris_flower_classification.ipynb)** — Multiclass baseline comparison, hyperparameter tuning, and final SVM evaluation.
+- **[Customer Churn Classification](projects/customer-churn/customer_churn_predictor.ipynb)** — Imbalanced classification with `ColumnTransformer`, in-fold random oversampling, multi-metric cross-validation, and holdout evaluation.
+- **[House Price Regression](projects/house-prices/house_prices.ipynb)** — Feature engineering, ElasticNet, XGBoost, cross-validation, and prediction ensembling on mixed tabular data.
+- **[Titanic Survival Classification](projects/titanic-survival/titanic.ipynb)** — EDA-driven passenger and group features, stratified evaluation, and tuned logistic regression/XGBoost models.
+- **[Iris Species Classification](projects/iris-classification/iris_flower_classification.ipynb)** — Multiclass baseline comparison, hyperparameter tuning, and final SVM evaluation.
 
 ### Financial and time-series analysis
 
-- **[S&P 500 Return Analysis](stock_return.ipynb)** — Ten-year cross-sectional analysis of normalized prices, annualized return and volatility, and daily-return correlations.
-- **[S&P 500 Next-Day Direction](stock_market_price_predictor.ipynb)** — Random-forest classification with lagged multi-horizon features and expanding-window backtesting.
+- **[S&P 500 Return Analysis](projects/sp500-return-analysis/sp500_return_analysis.ipynb)** — Ten-year cross-sectional analysis of normalized prices, annualized return and volatility, and daily-return correlations.
+- **[S&P 500 Next-Day Direction](projects/sp500-direction/sp500_direction_classifier.ipynb)** — Random-forest classification with lagged multi-horizon features and expanding-window backtesting.
 
 ### Natural language processing and recommendation
 
-- **[Twitter Sentiment Analysis](sentiment_analysis.ipynb)** — TF–IDF unigram/bigram features, logistic regression, error analysis, and coefficient-based interpretation.
-- **[Movie Recommendation Systems](recommendation_system.ipynb)** — Weighted popularity ranking, item-to-item correlation, and sparse cosine-neighbor retrieval.
+- **[Twitter Sentiment Analysis](projects/sentiment-analysis/sentiment_analysis.ipynb)** — TF–IDF unigram/bigram features, logistic regression, error analysis, and coefficient-based interpretation.
+- **[Movie Recommendation Systems](projects/movie-recommendation/recommendation_system.ipynb)** — Weighted popularity ranking, item-to-item correlation, and sparse cosine-neighbor retrieval.
 
 ### Deep learning and computer vision
 
-- **[Neural Network from Scratch](neural_network_from_scratch.ipynb)** — A framework-free walkthrough of dense-network mathematics and implementation.
-- **[Cats vs Dogs Classification](cats_vs_dogs_classification.ipynb)** — A TensorFlow `tf.data` image pipeline and custom convolutional neural network.
-- **[Real-Time Face Verification](real_time_facial_recognition.ipynb)** — An experimental local prototype using OpenCV and a Siamese neural network; it requires a webcam and private reference images.
+- **[Neural Network from Scratch](projects/neural-network-from-scratch/neural_network_from_scratch.ipynb)** — A framework-free walkthrough of dense-network mathematics and implementation.
+- **[Cats vs Dogs Classification](projects/cats-vs-dogs/cats_vs_dogs_classification.ipynb)** — A TensorFlow `tf.data` image pipeline and custom convolutional neural network.
+- **[Real-Time Face Verification](projects/face-verification/face_verification.ipynb)** — An experimental local prototype using OpenCV and a Siamese neural network; it requires a webcam and private reference images.
 
 ### Exploratory analysis and foundations
 
-- **[Student Placement Analysis](student_placement_eda.ipynb)** — An executive-style EDA focused on data quality, placement outcomes, and salary associations.
-- **[Linear Regression from Scratch](linear_regression_model_from_scratch.ipynb)** — A scikit-learn-style linear regressor trained with batch gradient descent.
+- **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** — An executive-style EDA focused on data quality, placement outcomes, and salary associations.
+- **[Linear Regression from Scratch](projects/linear-regression-from-scratch/linear_regression_model_from_scratch.ipynb)** — A scikit-learn-style linear regressor trained with batch gradient descent.
 
 ## Skills demonstrated
 
@@ -61,15 +61,21 @@ These notebooks are the best starting points because they include saved results 
 
 ```text
 .
-├── *.ipynb               # One self-contained portfolio project per notebook
-├── datasets/             # Small source datasets plus provenance documentation
-├── portfolio_utils/      # Reusable preprocessing shared by notebooks
-├── scripts/              # Lightweight repository validation
-├── requirements.txt      # Shared Python 3.12 notebook environment
-└── README.md              # Portfolio index and reviewer guide
+├── projects/              # One directory per independent case study
+│   ├── customer-churn/
+│   │   └── customer_churn_predictor.ipynb
+│   ├── house-prices/
+│   │   └── house_prices.ipynb
+│   └── ...                # Eleven additional project directories
+├── datasets/              # Shared source snapshots and provenance notes
+├── artifacts/             # Ignored models, submissions, and checkpoints
+├── portfolio_utils/       # Reusable paths and text preprocessing
+├── scripts/               # Lightweight repository validation
+├── requirements.txt       # Shared Python 3.12 notebook environment
+└── README.md               # Portfolio index and reviewer guide
 ```
 
-The notebooks remain at the repository root so existing links and relative dataset paths stay stable.
+Each project owns its notebook and can gain project-specific documentation or assets without crowding the repository root. Shared datasets and generated artifacts remain centralized; notebook setup cells resolve these locations from any directory inside the clone.
 
 ## Reproduce the projects
 
@@ -84,7 +90,7 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-Open a notebook and run its cells from top to bottom. Several projects download their data on first run through KaggleHub or `yfinance`; Kaggle-hosted datasets may require local Kaggle credentials. Hardware-dependent and long-running notebooks state their additional requirements near the top.
+Open a notebook under `projects/` and run its cells from top to bottom. Several projects download their data on first run through KaggleHub or `yfinance`; Kaggle-hosted datasets may require local Kaggle credentials. Hardware-dependent and long-running notebooks state their additional requirements near the top.
 
 To run the fast repository checks without executing model training:
 

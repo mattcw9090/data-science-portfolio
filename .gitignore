@@ -18,17 +18,18 @@ venv/
 *.log
 
 # Generated notebook artifacts
-/artifacts/
+/artifacts/*
+!/artifacts/README.md
 /training_checkpoints/
 /*.joblib
 /*.h5
 /*.keras
 /submission_*.csv
 /xgb_submission.csv
-/sp500.csv
 
 # Downloaded, extracted, or private data
 /datasets/.cache/
 /datasets/movie-lens-dataset-100k/
 /datasets/facial-recognition/
+/datasets/sp500.csv
 /datasets/sp500_close_10y.csv
