@@ -36,5 +36,5 @@ These SHA-256 checksums make the small checked-in competition files auditable:
 - MovieLens 100K requires acknowledgement and carries provider-specific restrictions. The archive is fetched from GroupLens at runtime instead of being redistributed in this repository. See the source README before use.
 - The financial notebooks use the current S&P 500 membership across historical prices. This creates survivorship and membership bias and should not be interpreted as a historically investable universe.
 - Yahoo Finance, Wikipedia, and Kaggle-hosted data can change. A fresh run may not reproduce an older market snapshot byte-for-byte.
-- The student-placement data is appropriate for demonstrating analysis technique, not for making real admissions, hiring, or compensation decisions.
+- The student-placement file is a synthetic dataset from its publisher, suitable for demonstrating analysis technique. It is not a basis for admissions, hiring, or compensation decisions.
 - Face images and trained biometric artifacts must remain local. Do not commit identifiable images, embeddings, checkpoints, or model files.
