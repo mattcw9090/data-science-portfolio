@@ -14,7 +14,7 @@ These notebooks are the best starting points because they include saved results 
 | **[S&P 500 Return Analysis](projects/sp500-return-analysis/sp500_return_analysis.ipynb)** | Batched data acquisition, coverage checks, normalized performance, annualized risk/return, and correlation analysis. | Analyzed **456 equities across 2,513 trading sessions**; the average pairwise daily-return correlation was **0.327**. |
 | **[Neural Network from Scratch](projects/neural-network-from-scratch/neural_network_from_scratch.ipynb)** | A fully connected regression network implemented in NumPy, including forward propagation, backpropagation, and mini-batch gradient descent. | Achieved **0.0229 validation MSE** on a nonlinear synthetic regression task. |
 | **[House Price Regression](projects/house-prices/house_prices.ipynb)** | Mixed-type feature engineering and comparison of linear, regularized, ensemble, and boosting models. | XGBoost reached a notebook-reported **0.1244 five-fold CV RMSE** on the log-transformed target. |
-| **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** | Data-quality audit, segment KPIs, effect sizes, and leak-free placement and salary baselines. Salary is excluded from the placement model. | **100,000** rows, **54.5%** placed, **13.32 LPA** mean salary among placed students. Placement ROC AUC **0.585** versus **0.500**. Placed-student salary R² **0.608**. |
+| **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** | Validation, a written cleaning rule, SQL groupings, KPI tables, and a short chart set on a 100,000-row placement file. | **54.5%** placed. Among placed students the mean package is **13.32 LPA** and the median is **13.30 LPA**. Branch rates sit between **54.1%** and **55.2%**. |
 
 ## Project index
 
@@ -43,7 +43,7 @@ These notebooks are the best starting points because they include saved results 
 
 ### Exploratory analysis and foundations
 
-- **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** — Audit, KPI segments, effect sizes, and leak-free baselines on a synthetic 100,000-row placement file. Placement is only weakly separable; salary among placed students tracks CGPA, coding score, and internships.
+- **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** — A lean reporting pass: data-quality checks, SQL (`GROUP BY`, `CASE`, windows), an Excel-style pivot, KPI tables, and three charts. Placement is **54.5%**; the median package among placed students is **13.30 LPA**.
 - **[Linear Regression from Scratch](projects/linear-regression-from-scratch/linear_regression_model_from_scratch.ipynb)** — A scikit-learn-style linear regressor trained with batch gradient descent.
 
 ## Skills demonstrated
