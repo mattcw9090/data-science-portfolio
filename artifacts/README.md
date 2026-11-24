@@ -1,16 +1,11 @@
 # Generated artifacts
 
-Notebooks write reusable models, competition submissions, and training checkpoints to project-specific subdirectories here. Generated files are intentionally ignored because they can be large, environment-specific, or reproducible from the corresponding notebook.
-
-Typical paths include:
+The customer-churn notebook writes its selected pipeline here:
 
 ```text
 artifacts/
-├── customer_churn/
-├── face_verification/
-├── house_prices/
-├── sentiment/
-└── titanic/
+└── customer_churn/
+    └── pipeline.joblib
 ```
 
-Run the relevant notebook to create an artifact locally. Do not commit private biometric data, trained face embeddings, credentials, or other sensitive outputs.
+Generated files are ignored. They can be large and are reproducible by rerunning the notebook. Run that notebook to create the file locally, and do not commit model files.

@@ -2,80 +2,61 @@
 
 [![Portfolio checks](https://github.com/mattcw9090/data-science-portfolio/actions/workflows/portfolio-quality.yml/badge.svg)](https://github.com/mattcw9090/data-science-portfolio/actions/workflows/portfolio-quality.yml)
 
-End-to-end projects across predictive modeling, financial analysis, natural language processing, recommender systems, and computer vision. The work emphasizes reproducible workflows, appropriate evaluation, and clear communication of results and limitations.
+Three case studies in imbalanced classification, cross-sectional market analysis, and tabular reporting. Each notebook states the question, the checks, the result, and the limits of that result.
+
+Honours research is maintained separately in [honours-project](https://github.com/mattcw9090/honours-project).
 
 ## Featured case studies
-
-These notebooks are the best starting points because they include saved results and a clear analytical narrative.
 
 | Project | Problem and approach | Saved result |
 |---|---|---|
 | **[Customer Churn Classification](projects/customer-churn/customer_churn_predictor.ipynb)** | Leakage-aware preprocessing and resampling inside stratified cross-validation, followed by model comparison and holdout evaluation. | Logistic regression reached **0.846 mean CV ROC-AUC** and **78.6% churn recall** on the holdout set. |
 | **[S&P 500 Return Analysis](projects/sp500-return-analysis/sp500_return_analysis.ipynb)** | Batched data acquisition, coverage checks, normalized performance, annualized risk/return, and correlation analysis. | Analyzed **456 equities across 2,513 trading sessions**; the average pairwise daily-return correlation was **0.327**. |
-| **[Neural Network from Scratch](projects/neural-network-from-scratch/neural_network_from_scratch.ipynb)** | A fully connected regression network implemented in NumPy, including forward propagation, backpropagation, and mini-batch gradient descent. | Achieved **0.0229 validation MSE** on a nonlinear synthetic regression task. |
-| **[House Price Regression](projects/house-prices/house_prices.ipynb)** | Mixed-type feature engineering and comparison of linear, regularized, ensemble, and boosting models. | XGBoost reached a notebook-reported **0.1244 five-fold CV RMSE** on the log-transformed target. |
 | **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** | Validation, a written cleaning rule, pandas groupings, KPI tables, three charts, and a short correlation check on a 100,000-row placement file. | **54.5%** placed. Among placed students the mean package is **13.32 LPA** and the median is **13.30 LPA**. Branch rates sit between **54.1%** and **55.2%**. |
 
 ## Project index
 
-### Applied machine learning
+### Classification
 
-- **[Customer Churn Classification](projects/customer-churn/customer_churn_predictor.ipynb)** — Imbalanced classification with `ColumnTransformer`, in-fold random oversampling, multi-metric cross-validation, and holdout evaluation.
-- **[House Price Regression](projects/house-prices/house_prices.ipynb)** — Feature engineering, ElasticNet, XGBoost, cross-validation, and prediction ensembling on mixed tabular data.
-- **[Titanic Survival Classification](projects/titanic-survival/titanic.ipynb)** — EDA-driven passenger and group features, stratified evaluation, and tuned logistic regression/XGBoost models.
-- **[Iris Species Classification](projects/iris-classification/iris_flower_classification.ipynb)** — Multiclass baseline comparison, hyperparameter tuning, and final SVM evaluation.
+- **[Customer Churn Classification](projects/customer-churn/customer_churn_predictor.ipynb)** — Imbalanced classification with `ColumnTransformer`, in-fold random oversampling, multi-metric cross-validation, and holdout evaluation. Logistic regression is the model selected by CV ROC-AUC. The comparison also includes a majority-class dummy, random forest, k-nearest neighbors, and XGBoost.
 
-### Financial and time-series analysis
+### Market analysis
 
-- **[S&P 500 Return Analysis](projects/sp500-return-analysis/sp500_return_analysis.ipynb)** — Ten-year cross-sectional analysis of normalized prices, annualized return and volatility, and daily-return correlations.
-- **[S&P 500 Next-Day Direction](projects/sp500-direction/sp500_direction_classifier.ipynb)** — Random-forest classification with lagged multi-horizon features and expanding-window backtesting.
+- **[S&P 500 Return Analysis](projects/sp500-return-analysis/sp500_return_analysis.ipynb)** — Ten-year cross-sectional analysis of normalized prices, annualized arithmetic return and volatility, and daily-return correlations. This is a descriptive study, not a predictive model.
 
-### Natural language processing and recommendation
+### Reporting
 
-- **[Twitter Sentiment Analysis](projects/sentiment-analysis/sentiment_analysis.ipynb)** — TF–IDF unigram/bigram features, logistic regression, error analysis, and coefficient-based interpretation.
-- **[Movie Recommendation Systems](projects/movie-recommendation/recommendation_system.ipynb)** — Weighted popularity ranking, item-to-item correlation, and sparse cosine-neighbor retrieval.
-
-### Deep learning and computer vision
-
-- **[Neural Network from Scratch](projects/neural-network-from-scratch/neural_network_from_scratch.ipynb)** — A framework-free walkthrough of dense-network mathematics and implementation.
-- **[Cats vs Dogs Classification](projects/cats-vs-dogs/cats_vs_dogs_classification.ipynb)** — A TensorFlow `tf.data` image pipeline and custom convolutional neural network.
-- **[Real-Time Face Verification](projects/face-verification/face_verification.ipynb)** — An experimental local prototype using OpenCV and a Siamese neural network; it requires a webcam and private reference images.
-
-### Exploratory analysis and foundations
-
-- **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** — A plain reporting pass: data-quality checks, pandas groupings, an Excel-style pivot, three charts, and correlations for pay. Placement is **54.5%**; the median package among placed students is **13.30 LPA**.
-- **[Linear Regression from Scratch](projects/linear-regression-from-scratch/linear_regression_model_from_scratch.ipynb)** — A scikit-learn-style linear regressor trained with batch gradient descent.
+- **[Student Placement Analysis](projects/student-placement-eda/student_placement_eda.ipynb)** — A reporting pass over a file the publisher describes as synthetic: data-quality checks, pandas groupings, an Excel-style pivot, three charts, and correlations for pay. Placement is **54.5%**; the median package among placed students is **13.30 LPA**.
 
 ## Skills demonstrated
 
 | Capability | Evidence in this repository |
 |---|---|
-| Data analysis and communication | Pandas, NumPy, Seaborn, Matplotlib, executive summaries, and limitation-aware conclusions |
-| Validation and model selection | Stratified cross-validation, holdout testing, hyperparameter search, and expanding-window backtesting |
-| Feature engineering | Customer, housing, passenger, text, image, and market-derived features |
-| Machine learning | Linear models, SVM, KNN, random forests, XGBoost, imbalanced classification, and regression |
-| Deep learning | CNNs, Siamese networks, TensorFlow input pipelines, and backpropagation implemented from first principles |
-| NLP and recommenders | TF–IDF text classification, weighted ranking, collaborative filtering, and sparse nearest neighbors |
+| Data analysis and communication | Pandas, NumPy, Seaborn, and Matplotlib, with written findings and limitation-aware conclusions |
+| Validation and model selection | Stratified cross-validation, an untouched holdout, and resampling confined to each training fold |
+| Tabular machine learning | Logistic regression, random forests, k-nearest neighbors, and XGBoost on an imbalanced classification task, with scaling and one-hot encoding inside the pipeline |
+| Market data | Constituent lookup, batched price downloads, daily returns, annualized risk and return, and pairwise correlation |
 
 ## Repository layout
 
 ```text
 .
-├── projects/              # One directory per independent case study
+├── projects/
 │   ├── customer-churn/
 │   │   └── customer_churn_predictor.ipynb
-│   ├── house-prices/
-│   │   └── house_prices.ipynb
-│   └── ...                # Eleven additional project directories
-├── datasets/              # Shared source snapshots and provenance notes
-├── artifacts/             # Ignored models, submissions, and checkpoints
-├── portfolio_utils/       # Reusable paths and text preprocessing
+│   ├── sp500-return-analysis/
+│   │   └── sp500_return_analysis.ipynb
+│   └── student-placement-eda/
+│       └── student_placement_eda.ipynb
+├── datasets/              # Provenance notes; downloaded caches are ignored
+├── artifacts/             # Ignored model output from the churn notebook
+├── portfolio_utils/       # Shared repository paths
 ├── scripts/               # Lightweight repository validation
 ├── requirements.txt       # Shared Python 3.12 notebook environment
-└── README.md               # Portfolio index and reviewer guide
+└── README.md              # Portfolio index and reviewer guide
 ```
 
-Each project owns its notebook and can gain project-specific documentation or assets without crowding the repository root. Shared datasets and generated artifacts remain centralized; notebook setup cells resolve these locations from any directory inside the clone.
+Each project is one notebook. Shared path constants live in `portfolio_utils`, so a notebook can be launched from its project directory or from the repository root. Dataset provenance is centralized in [datasets/README.md](datasets/README.md). The churn notebook writes its selected pipeline under `artifacts/`, and that file is not committed.
 
 ## Reproduce the projects
 
@@ -90,7 +71,9 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-Open a notebook under `projects/` and run its cells from top to bottom. Several projects download their data on first run through KaggleHub or `yfinance`; Kaggle-hosted datasets may require local Kaggle credentials. Hardware-dependent and long-running notebooks state their additional requirements near the top.
+Open a notebook under `projects/` and run its cells from top to bottom. Customer churn and student placement download their data on first run through KaggleHub; Kaggle-hosted datasets may require local Kaggle credentials. The S&P 500 notebook reads the current constituent table from Wikipedia and can download prices with `yfinance`. A local price cache is written to `datasets/sp500_close_10y.csv` and is gitignored.
+
+The churn notebook includes a random-forest grid search. That cell can take a while.
 
 To run the fast repository checks without executing model training:
 
@@ -101,7 +84,8 @@ python scripts/validate_portfolio.py
 ## Data sources and limitations
 
 - Dataset sources, local paths, access methods, and usage notes are documented in **[datasets/README.md](datasets/README.md)**.
-- Downloaded datasets, model files, submissions, checkpoints, market-data caches, and private face images are intentionally excluded from version control.
-- The S&P 500 analyses use the current constituent list across historical prices, so results are subject to survivorship and membership bias. They are analytical demonstrations, not investment advice.
-- The face-verification notebook is a local learning prototype, not a production biometric system. Reference images should remain private and must not be committed.
+- Downloaded datasets, the market-data cache, and the saved churn pipeline are intentionally excluded from version control.
+- The S&P 500 analysis uses the current constituent list across historical prices, so the panel has survivorship and membership bias. Annualized return is mean daily return multiplied by 252, not CAGR, and the return-to-risk ratio does not subtract a risk-free rate. The notebook is a descriptive study, not investment advice.
+- The placement file is described by its publisher as synthetic. The notebook is a reporting exercise. It is not a basis for hiring or pay decisions, and the associations are not estimates of what would happen if a student's record changed.
+- The churn holdout comes from the same source and time context. Random oversampling does not reproduce a live churn rate, and model choice is based on predictive metrics rather than the cost of a missed churner versus an unnecessary offer.
 - Third-party datasets retain their original licenses and terms; this repository does not grant additional rights to them.

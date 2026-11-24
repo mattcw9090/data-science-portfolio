@@ -20,16 +20,6 @@ venv/
 # Generated notebook artifacts
 /artifacts/*
 !/artifacts/README.md
-/training_checkpoints/
-/*.joblib
-/*.h5
-/*.keras
-/submission_*.csv
-/xgb_submission.csv
 
-# Downloaded, extracted, or private data
-/datasets/.cache/
-/datasets/movie-lens-dataset-100k/
-/datasets/facial-recognition/
-/datasets/sp500.csv
+# Regenerable market-data cache
 /datasets/sp500_close_10y.csv
